@@ -1,0 +1,33 @@
+{
+  "ccsConfigPath": "C:\\Scripts\\iis-cert-automation.config.json",
+  "logDirectory": "C:\\Logs",
+  "maxLogFiles": 5,
+  "startupDelaySeconds": 5,
+  "f5": {
+    "managementHost": "f5-01.example.local",
+    "managementPort": 443,
+    "partition": "Common",
+    "loginProviderName": "tmos",
+    "credentialTarget": "F5-iControl",
+    "pfxCredentialTarget": "PFXCertPassword",
+    "defaultsFrom": "/Common/clientssl",
+    "deviceGroup": "",
+    "saveConfig": true,
+    "requireActive": true,
+    "managementCertSha256": ""
+  },
+  "certificates": [
+    {
+      "cn": "www.example.com",
+      "pfxFileName": "www.example.com.pfx",
+      "serverName": "www.example.com",
+      "virtualServers": [
+        {
+          "name": "vs_www_443",
+          "partition": "Common",
+          "replaceClientSslProfile": ""
+        }
+      ]
+    }
+  ]
+}

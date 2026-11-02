@@ -1,0 +1,8 @@
+*.log
+*.pfx
+*.tmp
+*.pem
+Thumbs.db
+f5-publish.config.json
+iis-cert-automation.config.json
+F5CertPublish_state.json
